@@ -1,20 +1,19 @@
 // Lista de productos
 const products = [
-    { id: 1, name: 'Pizza', price: 10 },
-    { id: 2, name: 'Burger', price: 8 },
-    { id: 3, name: 'Pasta', price: 12 },
-    { id: 4, name: 'Salad', price: 6 },
-    { id: 5, name: 'Sandwich', price: 7 },
-    { id: 6, name: 'Soup', price: 5 },
-    { id: 7, name: 'Steak', price: 15 },
-    { id: 8, name: 'Fish', price: 13 },
-    { id: 9, name: 'Chicken Wings', price: 9 },
-    { id: 10, name: 'Fries', price: 4 },
+    { id: 1, name: 'Hamburguesa isleña', price: 15.000 },
+    { id: 2, name: 'Hamburguesa costeña', price: 15.000 },
+    { id: 3, name: 'Hamburguesa gaucha', price: 12.000 },
+    { id: 4, name: 'Hamburguesa doble carne', price: 20.000 },
+    { id: 5, name: 'Choripan', price: 10.000 },
+    { id: 6, name: 'Coca cola', price: 4000 },
+    { id: 7, name: 'Sprite', price: 4000 },
+    { id: 8, name: 'Corona', price: 7000},
+    { id: 9, name: 'Francesa', price: 4000 },
+    { id: 10, name: 'Casco', price: 4000 },
   ];
   
   let cart = [];
   
-  // Renderizar los productos en la página
   const productList = document.getElementById('product-list');
   products.forEach(product => {
     const productEl = document.createElement('div');
@@ -27,7 +26,6 @@ const products = [
     productList.appendChild(productEl);
   });
   
-  // Agregar producto al carrito
   function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     const cartItem = cart.find(item => item.id === productId);
@@ -40,7 +38,6 @@ const products = [
     renderCart();
   }
   
-  // Renderizar el carrito
   function renderCart() {
     const cartItemsContainer = document.getElementById('cart-items');
     cartItemsContainer.innerHTML = '';
@@ -62,7 +59,6 @@ const products = [
     document.getElementById('total-price').innerText = `Total: $${total}`;
   }
   
-  // Actualizar la cantidad de un producto en el carrito
   function updateQuantity(productId, change) {
     const cartItem = cart.find(item => item.id === productId);
     if (cartItem) {
@@ -75,13 +71,11 @@ const products = [
     }
   }
   
-  // Eliminar producto del carrito
   function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     renderCart();
   }
   
-  // Realizar el pedido
   function checkout() {
     if (cart.length === 0) {
       alert('El carrito está vacío.');
