@@ -1,10 +1,10 @@
 // Lista de productos
 const products = [
-    { id: 1, name: 'Hamburguesa isleña', price: 15.000 },
-    { id: 2, name: 'Hamburguesa costeña', price: 15.000 },
-    { id: 3, name: 'Hamburguesa gaucha', price: 12.000 },
-    { id: 4, name: 'Hamburguesa doble carne', price: 20.000 },
-    { id: 5, name: 'Choripan', price: 10.000 },
+    { id: 1, name: 'Hamburguesa isleña', price: 15000 },
+    { id: 2, name: 'Hamburguesa costeña', price: 15000 },
+    { id: 3, name: 'Hamburguesa gaucha', price: 12000 },
+    { id: 4, name: 'Hamburguesa doble carne', price: 20000 },
+    { id: 5, name: 'Choripan', price: 10000 },
     { id: 6, name: 'Coca cola', price: 4000 },
     { id: 7, name: 'Sprite', price: 4000 },
     { id: 8, name: 'Corona', price: 7000},
