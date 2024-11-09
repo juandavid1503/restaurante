@@ -7,7 +7,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: turquoise;
     color: #333;
   }
   
@@ -30,7 +30,7 @@
   
   #products, #cart {
     width: 45%;
-    background-color: #fff;
+    background-color: #ffffff70;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -42,8 +42,8 @@
   }
   
   .product, .cart-item {
-    border: 1px solid #ddd;
-    padding: 15px;
+    border: 10px solid #ddd;
+    padding: 20px;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
     padding: 5px 10px;
     border: none;
     background-color: #28a745;
-    color: #fff;
+    color: #04e9f0ca;
     border-radius: 4px;
     cursor: pointer;
   }
