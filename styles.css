@@ -10,6 +10,10 @@ body {
   background-color: --light-gray#f9f9f951;
   color: #02cbd6ef;
 }
+.separated-button {
+  margin-right: 100px;
+}
+
 
 header {
   background-color: lightblue;
@@ -33,7 +37,7 @@ h1, h2 {
 
 #products, #cart {
   width: 45%;
-  background-color: #0ce6ac;
+  background-color: #0ce6ac00;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
