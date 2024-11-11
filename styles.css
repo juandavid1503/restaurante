@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: --light-gray#f9f9f9;
-  color: #333;
+  color: #02cbd6ef;
 }
 
 header {
@@ -33,7 +33,7 @@ h1, h2 {
 
 #products, #cart {
   width: 45%;
-  background-color: #fff;
+  background-color: #0ce6ac;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -56,7 +56,7 @@ h1, h2 {
 .product button, .cart-item button {
   padding: 5px 10px;
   border: none;
-  background-color: #28a745;
+  background-color: #4557706f;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -72,7 +72,7 @@ h1, h2 {
 }
 
 button[onclick="checkout()"] {
-  background-color: #007bff;
+  background-color: #0bc1ac;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -83,5 +83,5 @@ button[onclick="checkout()"] {
 }
 
 button[onclick="checkout()"]:hover {
-  background-color: #0069d9;
+  background-color: #12cfb6;
 }
