@@ -14,10 +14,10 @@ body {
 header {
   background-color: lightblue;
   color: #fff;
-  padding: 20px;
-  width: 40;
-  height: 40px;
-  text-align: center;
+  padding: 40px;
+  width: 60px;
+  height: 60px;
+  text-align: auto;
 }
 
 main {
@@ -55,7 +55,7 @@ h1, h2 {
 .product button, .cart-item button {
   padding: 5px 10px;
   border: none;
-  background-color: #01e454d6;
+  background-color: #4dc97acd;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -75,7 +75,7 @@ button[onclick="checkout()"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  color: rgba(14, 219, 212, 0.966);
+  color: rgba(0, 0, 0, 0.966);
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
