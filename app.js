@@ -104,13 +104,7 @@ function confirmPayment() {
 
   const confirmation = confirm(`¿Deseas realizar el pago con ${paymentText}?`);
   
-  if (confirmation) {
-    alert('¡Pago exitoso!');
-    cart = [];
-    renderCart();
-    closeModal(); // Cerrar el modal después del pago
-  }
-}
+  
 
 // Cerrar el modal sin realizar el pedido
 function closeModal() {
