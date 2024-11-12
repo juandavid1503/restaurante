@@ -14,15 +14,16 @@ const products = [
 
 let cart = [];
 
+// Renderizar la lista de productos
 const productList = document.getElementById('product-list');
 products.forEach(product => {
   const productEl = document.createElement('div');
   productEl.classList.add('product');
-  productEl.innerHTML = `
+  productEl.innerHTML = 
     <h3>${product.name}</h3>
     <p>Precio: $${product.price}</p>
     <button onclick="addToCart(${product.id})">Añadir al Carrito</button>
-  `;
+  ;
   productList.appendChild(productEl);
 });
 
@@ -47,16 +48,16 @@ function renderCart() {
     total += item.price * item.quantity;
     const itemEl = document.createElement('div');
     itemEl.classList.add('cart-item');
-    itemEl.innerHTML = `
+    itemEl.innerHTML = 
       <p>${item.name} x${item.quantity} - $${item.price * item.quantity}</p>
       <button onclick="updateQuantity(${item.id}, 1)">+</button>
       <button onclick="updateQuantity(${item.id}, -1)">-</button>
       <button onclick="removeFromCart(${item.id})">Eliminar</button>
-    `;
+    ;
     cartItemsContainer.appendChild(itemEl);
   });
 
-  document.getElementById('total-price').innerText = `Total: $${total}`;
+  document.getElementById('total-price').innerText = Total: $${total};
 }
 
 function updateQuantity(productId, change) {
@@ -71,52 +72,22 @@ function updateQuantity(productId, change) {
   }
 }
 
-// Eliminar un producto del carrito
+// Eliminar un producto del carro
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
 }
-// Mostrar el modal de método de pago
+
 function checkout() {
   if (cart.length === 0) {
-    alert('El carrito está vacío.');
+    alert('El carro está vacío.');
     return;
   }
-  document.getElementById('payment-modal').style.display = 'flex';
-}
-
-// Confirmar el método de pago y realizar el pedido
-function confirmPayment() {
-  const paymentMethod = document.getElementById('payment-select').value;
-  let paymentText;
-
-  switch (paymentMethod) {
-    case 'credit-card':
-      paymentText = 'Tarjeta de Crédito';
-      break;
-    case 'debit-card':
-      paymentText = 'Tarjeta de Débito';
-      break;
-    case 'cash':
-      paymentText = 'Efectivo';
-      break;
-  }
-
-  const confirmation = confirm(`¿Deseas realizar el pago con ${paymentText}?`);
-  
-  
-
-// Cerrar el modal sin realizar el pedido
-function closeModal() {
-  document.getElementById('payment-modal').style.display = 'none';
-}
-
-
   alert('¡Pago éxitoso!');
   cart = [];
   renderCart();
 }
-// Cambia entre las páginas
+
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
