@@ -14,6 +14,7 @@ const products = [
 
 let cart = [];
 
+// Renderizar la lista de productos
 const productList = document.getElementById('product-list');
 products.forEach(product => {
   const productEl = document.createElement('div');
@@ -36,7 +37,7 @@ function addToCart(productId) {
     cart.push({ ...product, quantity: 1 });
   }
   renderCart();
-  showCartButton(); 
+  showCartButton(); // Mostrar botón "Ir al carrito" cuando se añade un producto
 }
 
 function renderCart() {
@@ -75,7 +76,8 @@ function updateQuantity(productId, change) {
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
-  if (cart.length === 0) hideCartButton(); 
+  if (cart.length === 0) hideCartButton(); // Ocultar botón "Ir al carrito" si el carrito está vacío
+}
 
 function checkout() {
   if (cart.length === 0) {
@@ -85,10 +87,10 @@ function checkout() {
   alert('¡Pago exitoso!');
   cart = [];
   renderCart();
-  hideCartButton(); 
+  hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago 
 }
 
-// Mostrar "Ir al carro" solo en la página de menú
+// Mostrar "Ir al carrito" solo en la página de menú
 function showCartButton() {
   const goToCartButton = document.getElementById('go-to-cart-button');
   goToCartButton.style.display = 'block';
@@ -105,7 +107,7 @@ function showPage(pageId) {
 
   const checkoutButtonContainer = document.getElementById('checkout-button-container');
   if (pageId === 'cart-page') {
-    checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carro
+    checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
   } else {
     checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
   }
