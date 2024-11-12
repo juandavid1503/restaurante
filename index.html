@@ -30,15 +30,20 @@
   <div id="cart-items"></div>
   <p id="total-price">Total: $0</p>
 
-  <!-- Selección de método de pago -->
-  <div id="payment-method">
-    <label for="payment-select">Método de Pago:</label>
+  <!-- Modal de Método de Pago -->
+<div id="payment-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Selecciona el Método de Pago</h2>
     <select id="payment-select">
       <option value="credit-card">Tarjeta de Crédito</option>
       <option value="debit-card">Tarjeta de Débito</option>
       <option value="cash">Efectivo</option>
     </select>
+    <button onclick="confirmPayment()">Confirmar Pago</button>
+    <button onclick="closeModal()">Cancelar</button>
   </div>
+</div>
+
 
   <button onclick="showPage('product-page')">Regresar al Menú</button>
 </div>

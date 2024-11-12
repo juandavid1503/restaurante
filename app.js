@@ -76,31 +76,47 @@ function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
 }
-
-// Realizar el pedido (vaciar el carrito)
+// Mostrar el modal de método de pago
 function checkout() {
   if (cart.length === 0) {
     alert('El carrito está vacío.');
     return;
   }
+  document.getElementById('payment-modal').style.display = 'flex';
+}
 
-   // Obtener el método de pago seleccionado
-   const paymentMethod = document.getElementById('payment-select').value;
-   let paymentText;
- 
-   switch (paymentMethod) {
-     case 'credit-card':
-       paymentText = 'Tarjeta de Crédito';
-       break;
-     case 'debit-card':
-       paymentText = 'Tarjeta de Débito';
-       break;
-     case 'cash':
-       paymentText = 'Efectivo';
-       break;
-   }
- 
-   const confirmation = confirm(`¿Deseas realizar el pago con ${paymentText}?`);
+// Confirmar el método de pago y realizar el pedido
+function confirmPayment() {
+  const paymentMethod = document.getElementById('payment-select').value;
+  let paymentText;
+
+  switch (paymentMethod) {
+    case 'credit-card':
+      paymentText = 'Tarjeta de Crédito';
+      break;
+    case 'debit-card':
+      paymentText = 'Tarjeta de Débito';
+      break;
+    case 'cash':
+      paymentText = 'Efectivo';
+      break;
+  }
+
+  const confirmation = confirm(`¿Deseas realizar el pago con ${paymentText}?`);
+  
+  if (confirmation) {
+    alert('¡Pago exitoso!');
+    cart = [];
+    renderCart();
+    closeModal(); // Cerrar el modal después del pago
+  }
+}
+
+// Cerrar el modal sin realizar el pedido
+function closeModal() {
+  document.getElementById('payment-modal').style.display = 'none';
+}
+
 
   alert('¡Pago éxitoso!');
   cart = [];
