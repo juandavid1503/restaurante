@@ -70,7 +70,17 @@ h1, h2 {
   margin-top: 10px;
 }
 
-
+/* Contenedor fijo para el botón "Realizar Pago" */
+#checkout-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(59, 55, 13, 0.8);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
 
 #checkout-button-container button {
   background-color: #21a21aa5;
