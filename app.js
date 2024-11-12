@@ -7,7 +7,7 @@ const products = [
   { id: 5, name: 'Hamburguesa especial', price: 12000 },
   { id: 6, name: 'Hamburguesa de temporada', price: 18000 },
   { id: 7, name: 'Hamburguesa jalisco', price: 15000 },
-  { id: 8, name: 'Hamburguesa rosario', price: 17000 },
+  { id: 8, name: 'Hamburguesa rosario', price: 16000 },
   { id: 9, name: 'Hamburguesa sencilla', price: 10000 },
   { id: 10, name: 'Hamburguesa pollo', price: 16000 },
 ];
