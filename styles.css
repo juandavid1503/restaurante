@@ -13,7 +13,7 @@ body {
 
 
 header {
-  background-color: lightblue;
+  background-color: rgb(3, 244, 232);
   color: #fff;
   padding: 40px;
   text-align: center;
@@ -43,7 +43,7 @@ h1, h2 {
 }
 
 .product, .cart-item {
-  border: 1px solid #ddd;
+  border: 1px solid #da0e0e;
   padding: 15px;
   border-radius: 5px;
   display: flex;
@@ -71,7 +71,7 @@ h1, h2 {
 }
 
 button[onclick="checkout()"] {
-  background-color: #0bc1ac;
+  background-color: #2abc39;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -82,5 +82,5 @@ button[onclick="checkout()"] {
 }
 
 button[onclick="checkout()"]:hover {
-  background-color: #12cfb6;
+  background-color: #29b83cb1;
 }
