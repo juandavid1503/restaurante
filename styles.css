@@ -25,6 +25,7 @@ main {
 
 h1, h2 {
   color: #000000;
+  align-items: center;
 }
 
 #products, #cart {
