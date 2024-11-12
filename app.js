@@ -36,7 +36,7 @@ function addToCart(productId) {
     cart.push({ ...product, quantity: 1 });
   }
   renderCart();
-  showCartButton(); // Mostrar botón "Ir al carrito" cuando se añade un producto
+  showCartButton(); 
 }
 
 function renderCart() {
@@ -75,8 +75,7 @@ function updateQuantity(productId, change) {
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
-  if (cart.length === 0) hideCartButton(); // Ocultar botón "Ir al carrito" si el carrito está vacío
-}
+  if (cart.length === 0) hideCartButton(); 
 
 function checkout() {
   if (cart.length === 0) {
@@ -86,10 +85,10 @@ function checkout() {
   alert('¡Pago exitoso!');
   cart = [];
   renderCart();
-  hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago
+  hideCartButton(); 
 }
 
-// Mostrar el botón "Ir al carrito" solo en la página de menú
+// Mostrar "Ir al carro" solo en la página de menú
 function showCartButton() {
   const goToCartButton = document.getElementById('go-to-cart-button');
   goToCartButton.style.display = 'block';
@@ -106,7 +105,7 @@ function showPage(pageId) {
 
   const checkoutButtonContainer = document.getElementById('checkout-button-container');
   if (pageId === 'cart-page') {
-    checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
+    checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carro
   } else {
     checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
   }
