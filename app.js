@@ -14,7 +14,6 @@ const products = [
 
 let cart = [];
 
-// Renderizar la lista de productos
 const productList = document.getElementById('product-list');
 products.forEach(product => {
   const productEl = document.createElement('div');
@@ -84,6 +83,25 @@ function checkout() {
     alert('El carrito está vacío.');
     return;
   }
+
+   // Obtener el método de pago seleccionado
+   const paymentMethod = document.getElementById('payment-select').value;
+   let paymentText;
+ 
+   switch (paymentMethod) {
+     case 'credit-card':
+       paymentText = 'Tarjeta de Crédito';
+       break;
+     case 'debit-card':
+       paymentText = 'Tarjeta de Débito';
+       break;
+     case 'cash':
+       paymentText = 'Efectivo';
+       break;
+   }
+ 
+   const confirmation = confirm(`¿Deseas realizar el pago con ${paymentText}?`);
+
   alert('¡Pago éxitoso!');
   cart = [];
   renderCart();

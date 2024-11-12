@@ -17,7 +17,7 @@
     <button onclick="showPage('cart-page')">Ir al Carrito</button>
   </header>
 
-  <!-- Página de Productos -->
+  <!-- Página de menú -->
    
   <div id="product-page" class="page active">
     <h1>Menú</h1>
@@ -29,6 +29,17 @@
   <h1>Carro de Compras</h1>
   <div id="cart-items"></div>
   <p id="total-price">Total: $0</p>
+
+  <!-- Selección de método de pago -->
+  <div id="payment-method">
+    <label for="payment-select">Método de Pago:</label>
+    <select id="payment-select">
+      <option value="credit-card">Tarjeta de Crédito</option>
+      <option value="debit-card">Tarjeta de Débito</option>
+      <option value="cash">Efectivo</option>
+    </select>
+  </div>
+
   <button onclick="showPage('product-page')">Regresar al Menú</button>
 </div>
 
