@@ -9,7 +9,7 @@ const products = [
   { id: 7, name: 'Hamburguesa jalisco', price: 15000 },
   { id: 8, name: 'Hamburguesa rosario', price: 17000 },
   { id: 9, name: 'Hamburguesa sencilla', price: 10000 },
-  { id: 10, name: 'Hamburguesa pollo', price: 18000 },
+  { id: 10, name: 'Hamburguesa pollo', price: 16000 },
 ];
 
 let cart = [];
