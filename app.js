@@ -87,10 +87,10 @@ function checkout() {
   alert('¡Pago exitoso!');
   cart = [];
   renderCart();
-  hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago 
+  hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago
 }
 
-// Mostrar "Ir al carrito" solo en la página de menú
+// Mostrar el botón "Ir al carrito" solo en la página de menú
 function showCartButton() {
   const goToCartButton = document.getElementById('go-to-cart-button');
   goToCartButton.style.display = 'block';
