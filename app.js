@@ -88,9 +88,10 @@ function checkout() {
   cart = [];
   renderCart();
   hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago
+  showPage('product-page'); // Redirigir a al menú
 }
 
-// Mostrar el botón "Ir al carrito" solo en la página de menú
+// Mostrar el botón "Ir al carrito" solo en el menú
 function showCartButton() {
   const goToCartButton = document.getElementById('go-to-cart-button');
   goToCartButton.style.display = 'block';
@@ -109,6 +110,6 @@ function showPage(pageId) {
   if (pageId === 'cart-page') {
     checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
   } else {
-    checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
+    checkoutButtonContainer.style.display = 'none'; // Ocultar en páginas
   }
 }
