@@ -37,6 +37,7 @@ function addToCart(productId) {
     cart.push({ ...product, quantity: 1 });
   }
   renderCart();
+  showCartButton(); // Mostrar botón "Ir al carrito" cuando se añade un producto
 }
 
 function renderCart() {
@@ -72,13 +73,12 @@ function updateQuantity(productId, change) {
   }
 }
 
-// Eliminar un producto del carrito
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
+  if (cart.length === 0) hideCartButton(); // Ocultar botón "Ir al carrito" si el carrito está vacío
 }
 
-// Realizar el pedido (vaciar el carrito)
 function checkout() {
   if (cart.length === 0) {
     alert('El carrito está vacío.');
@@ -87,17 +87,28 @@ function checkout() {
   alert('¡Pago exitoso!');
   cart = [];
   renderCart();
+  hideCartButton(); // Ocultar botón "Ir al carrito" después de realizar el pago
 }
 
-// Cambia entre las páginas
+// Mostrar el botón "Ir al carrito" solo en la página de menú
+function showCartButton() {
+  const goToCartButton = document.getElementById('go-to-cart-button');
+  goToCartButton.style.display = 'block';
+}
+
+function hideCartButton() {
+  const goToCartButton = document.getElementById('go-to-cart-button');
+  goToCartButton.style.display = 'none';
+}
+
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
 
   const checkoutButtonContainer = document.getElementById('checkout-button-container');
   if (pageId === 'cart-page') {
-      checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
+    checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
   } else {
-      checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
+    checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
   }
 }
