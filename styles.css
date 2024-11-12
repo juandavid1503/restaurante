@@ -13,7 +13,7 @@ body {
 
 
 header {
-  background-color: rgba(95, 80, 39, 0.521);
+  background-color: rgba(59, 55, 13, 0.521);
   color: #060505;
   padding: 40px;
   text-align: center;
@@ -55,14 +55,14 @@ h1, h2 {
   padding: 5px 10px;
   gap: 100px;
   border: none;
-  background-color: #4dc97acd;
+  background-color: #36370b98;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .product button:hover, .cart-item button:hover {
-  background-color: #218838;
+  background-color: #4d4e1484;
 }
 
 #total-price {
@@ -71,7 +71,7 @@ h1, h2 {
 }
 
 button[onclick="checkout()"] {
-  background-color: #2abc39;
+  background-color: #2f34116f;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -82,5 +82,5 @@ button[onclick="checkout()"] {
 }
 
 button[onclick="checkout()"]:hover {
-  background-color: #29b83cb1;
+  background-color: #4651135a;
 }
