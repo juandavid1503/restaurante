@@ -14,7 +14,6 @@ const products = [
 
 let cart = [];
 
-// Renderizar la lista de productos
 const productList = document.getElementById('product-list');
 products.forEach(product => {
   const productEl = document.createElement('div');
