@@ -70,22 +70,29 @@ h1, h2 {
   margin-top: 10px;
 }
 
-#cart-page {
-  position: relative;
-  padding-bottom: 80px; 
+/* Contenedor fijo para el botón "Realizar Pago" */
+#checkout-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(59, 55, 13, 0.8);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-button[onclick="checkout()"] {
+#checkout-button-container button {
   background-color: #21a21aa5;
   padding: 10px;
   border: none;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.966);
   cursor: pointer;
-  width: 100%;
-  margin-top: 10px;
+  width: 90%; /* Ajusta el ancho del botón */
+  font-size: 16px;
 }
 
-button[onclick="checkout()"]:hover {
+#checkout-button-container button:hover {
   background-color: #36a924ae;
 }
