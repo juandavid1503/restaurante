@@ -19,11 +19,11 @@ const productList = document.getElementById('product-list');
 products.forEach(product => {
   const productEl = document.createElement('div');
   productEl.classList.add('product');
-  productEl.innerHTML = 
+  productEl.innerHTML = `
     <h3>${product.name}</h3>
     <p>Precio: $${product.price}</p>
     <button onclick="addToCart(${product.id})">Añadir al Carrito</button>
-  ;
+  `;
   productList.appendChild(productEl);
 });
 
@@ -48,16 +48,16 @@ function renderCart() {
     total += item.price * item.quantity;
     const itemEl = document.createElement('div');
     itemEl.classList.add('cart-item');
-    itemEl.innerHTML = 
+    itemEl.innerHTML = `
       <p>${item.name} x${item.quantity} - $${item.price * item.quantity}</p>
       <button onclick="updateQuantity(${item.id}, 1)">+</button>
       <button onclick="updateQuantity(${item.id}, -1)">-</button>
       <button onclick="removeFromCart(${item.id})">Eliminar</button>
-    ;
+    `;
     cartItemsContainer.appendChild(itemEl);
   });
 
-  document.getElementById('total-price').innerText = Total: $${total};
+  document.getElementById('total-price').innerText = `Total: $${total}`;
 }
 
 function updateQuantity(productId, change) {
@@ -72,22 +72,24 @@ function updateQuantity(productId, change) {
   }
 }
 
-// Eliminar un producto del carro
+// Eliminar un producto del carrito
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== productId);
   renderCart();
 }
 
+// Realizar el pedido (vaciar el carrito)
 function checkout() {
   if (cart.length === 0) {
-    alert('El carro está vacío.');
+    alert('El carrito está vacío.');
     return;
   }
-  alert('¡Pago éxitoso!');
+  alert('¡Pago exitoso!');
   cart = [];
   renderCart();
 }
 
+// Cambia entre las páginas
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
