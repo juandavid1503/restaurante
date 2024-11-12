@@ -88,11 +88,15 @@ function checkout() {
   cart = [];
   renderCart();
 }
-
-// Cambiar entre páginas
+// Cambia entre las páginas
 function showPage(pageId) {
-  document.querySelectorAll('.page').forEach(page => {
-    page.classList.remove('active');
-  });
+  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
   document.getElementById(pageId).classList.add('active');
+
+  const checkoutButtonContainer = document.getElementById('checkout-button-container');
+  if (pageId === 'cart-page') {
+      checkoutButtonContainer.style.display = 'block'; // Mostrar en la página del carrito
+  } else {
+      checkoutButtonContainer.style.display = 'none'; // Ocultar en otras páginas
+  }
 }
