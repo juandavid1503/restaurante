@@ -13,8 +13,8 @@ body {
 
 
 header {
-  background-color: rgb(3, 244, 232);
-  color: #fff;
+  background-color: rgba(95, 80, 39, 0.521);
+  color: #060505;
   padding: 40px;
   text-align: center;
 }
@@ -26,7 +26,7 @@ main {
 }
 
 h1, h2 {
-  color: #333;
+  color: #000000;
 }
 
 #products, #cart {
@@ -43,7 +43,7 @@ h1, h2 {
 }
 
 .product, .cart-item {
-  border: 1px solid #da0e0e;
+  border: 1px solid #000000;
   padding: 15px;
   border-radius: 5px;
   display: flex;
