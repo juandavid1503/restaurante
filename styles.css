@@ -6,7 +6,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-image: url('hamburguesa.jpg'); /* Agrega la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-color: #ffffff; /* Color de fondo de respaldo */
   color: #030303ef;
   margin: 20px;
 }
