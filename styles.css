@@ -66,7 +66,7 @@ h1, h2 {
 }
 
 .product button:hover, .cart-item button:hover {
-  background-color: #402994ad;
+  background-color: #0659ff;
 }
 
 #total-price {
@@ -87,7 +87,7 @@ h1, h2 {
 }
 
 #checkout-button-container button {
-  background-color: #331aa2c5;
+  background-color: #0015ff;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -98,5 +98,5 @@ h1, h2 {
 }
 
 #checkout-button-container button:hover {
-  background-color: #3021b0ce;
+  background-color: #1900ff;
 }
